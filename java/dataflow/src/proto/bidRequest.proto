@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package edu.usfca.protobuf;
+
+message BidRequest{
+    string id = 1;
+    App app = 4;
+    Device device = 5;
+    message Device {
+        Geo geo = 4;
+        string os = 14;
+        string ifa = 20;
+
+    }
+    message App {
+        string bundle = 8;
+    }
+    message Geo {
+        string country = 3;
+        string region = 4;
+    }
+}
